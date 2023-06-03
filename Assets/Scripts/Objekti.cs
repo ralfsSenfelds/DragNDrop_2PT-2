@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Objekti : MonoBehaviour {
-	public GameObject atkritumuMasina;
-	public GameObject atraPalidziba;
-	public GameObject auobuss;
+public class Objekti : MonoBehaviour
+{
+    public GameObject atkritumuMasina;
+    public GameObject atraPalidziba;
+    public GameObject auobuss;
     public GameObject b2;
     public GameObject cement;
     public GameObject e46;
@@ -17,9 +18,9 @@ public class Objekti : MonoBehaviour {
     public GameObject firecar;
 
     [HideInInspector]
-	public Vector2 atkrMKoord;
-	[HideInInspector]
-	public Vector2 atraPKoord;
+    public Vector2 atkrMKoord;
+    [HideInInspector]
+    public Vector2 atraPKoord;
     [HideInInspector]
     public Vector2 bussKoord;
     [HideInInspector]
@@ -41,15 +42,17 @@ public class Objekti : MonoBehaviour {
     [HideInInspector]
     public Vector2 firecarKoord;
     public Canvas kanva;
-	public AudioSource audioAvots;
+    public AudioSource audioAvots;
     public AudioClip[] skanasKoAtskanot;
     [HideInInspector]
-	public bool vaiIstajaVieta = false;
-	public GameObject pedejaisVilktais = null;
+    public bool vaiIstajaVieta = false;
+    public GameObject pedejaisVilktais = null;
+    public int PlacedCarCount = 0; // Nosaka pareizi novietotās mašīnas
 
     // Use this for initialization
-    void Start () {
-		atkrMKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
+    void Start()
+    {
+        atkrMKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
         atraPKoord = atraPalidziba.GetComponent<RectTransform>().localPosition;
         bussKoord = auobuss.GetComponent<RectTransform>().localPosition;
         b2Koord = b2.GetComponent<RectTransform>().localPosition;

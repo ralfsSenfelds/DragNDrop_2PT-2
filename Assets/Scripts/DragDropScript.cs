@@ -6,9 +6,7 @@ using UnityEngine.EventSystems;
 public class DragDropScript : MonoBehaviour,
     IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    //Uzglabās norādi uz Objektu skriptu
     public Objekti objektuSkripts;
-    //Uzglabās norādi uz katra objekta CanvasGroup
     private CanvasGroup kanvasGrupa;
     private RectTransform velkObjektuRectTransf;
 
@@ -31,14 +29,18 @@ public class DragDropScript : MonoBehaviour,
         objektuSkripts.pedejaisVilktais = eventData.pointerDrag;
         kanvasGrupa.alpha = 1f;
 
-        if (objektuSkripts.vaiIstajaVieta == false)
-            kanvasGrupa.blocksRaycasts = true;
-        else
+        if (objektuSkripts.vaiIstajaVieta)
+        {
             objektuSkripts.pedejaisVilktais = null;
-        objektuSkripts.vaiIstajaVieta = false;
+            objektuSkripts.vaiIstajaVieta = false;
+            objektuSkripts.PlacedCarCount++; // Skaita spēlētāja novietotās mašīnas
+        }
+        else
+        {
+            kanvasGrupa.blocksRaycasts = true;
+        }
     }
 
-    // Use this for initialization
     void Start()
     {
         kanvasGrupa = GetComponent<CanvasGroup>();
