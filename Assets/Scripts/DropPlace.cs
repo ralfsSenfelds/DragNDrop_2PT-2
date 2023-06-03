@@ -60,6 +60,33 @@ public class DropPlace : MonoBehaviour, IDropHandler {
                     case "buss":
                         objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
                         break;
+                    case "b2":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "cement":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "e46":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "e61":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "excavator":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "police":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "tractor1":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "tractor2":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
+                    case "firecar":
+                        objektuSkripts.auobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.bussKoord;
+                        break;
                 }
             }
         }
