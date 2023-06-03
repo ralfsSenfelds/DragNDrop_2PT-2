@@ -51,6 +51,7 @@ public class GameLogic : MonoBehaviour
 
         // Parāda vajadzīgo bildi salīdzinot ar nopelnītajām zvaigznēm
         ShowStarImages(collectedStars);
+        objektuSkripts.PlacedCarCount = 0;
     }
 
     private int CalculateStarCount()
