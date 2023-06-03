@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragDropScript : MonoBehaviour,
-	IBeginDragHandler, IDragHandler, IEndDragHandler {
+    IBeginDragHandler, IDragHandler, IEndDragHandler
+{
     //Uzglabās norādi uz Objektu skriptu
     public Objekti objektuSkripts;
     //Uzglabās norādi uz katra objekta CanvasGroup
     private CanvasGroup kanvasGrupa;
     private RectTransform velkObjektuRectTransf;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         objektuSkripts.pedejaisVilktais = null;
@@ -19,7 +21,9 @@ public class DragDropScript : MonoBehaviour,
 
     public void OnDrag(PointerEventData eventData)
     {
-        velkObjektuRectTransf.anchoredPosition += eventData.delta / objektuSkripts.kanva.scaleFactor;
+        Vector2 cursorPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(objektuSkripts.kanva.transform as RectTransform, eventData.position, eventData.pressEventCamera, out cursorPos);
+        transform.position = objektuSkripts.kanva.transform.TransformPoint(cursorPos);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -35,7 +39,8 @@ public class DragDropScript : MonoBehaviour,
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         kanvasGrupa = GetComponent<CanvasGroup>();
         velkObjektuRectTransf = GetComponent<RectTransform>();
     }

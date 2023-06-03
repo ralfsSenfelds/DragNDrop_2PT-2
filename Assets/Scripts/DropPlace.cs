@@ -42,6 +42,33 @@ public class DropPlace : MonoBehaviour, IDropHandler {
                         case "buss":
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
                             break;
+                        case "b2":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
+                            break;
+                        case "cement":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
+                            break;
+                        case "e46":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
+                            break;
+                        case "e61":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[7]);
+                            break;
+                        case "excavator":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[8]);
+                            break;
+                        case "police":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[9]);
+                            break;
+                        case "tractor1":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[10]);
+                            break;
+                        case "tractor2":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
+                            break;
+                        case "firecar":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[12]);
+                            break;
                     }      
                 }
             }
